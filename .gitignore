@@ -1,0 +1,16 @@
+
+*.prefab
+*.meta
+Assets/Resources/.DS_Store
+Assets/.DS_Store
+Assembly-CSharp.csproj
+.DS_Store
+*.sln
+*.asset
+*.info
+
+Library/*
+ProjectSettings/ProjectVersion.txt
+Packages/manifest.json
+obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+Assets/Scenes/SampleScene.unity

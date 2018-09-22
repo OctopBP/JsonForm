@@ -1,0 +1,31 @@
+﻿{
+  "schema": {
+    "load": "Base",
+
+    "groups": [
+      {
+        "name": "Base",
+        "fields": [
+          {
+            "type": "string",
+            "name": "name"
+          },
+          {
+            "type": "dictionary_array",
+            "name": "special",
+            "array_fields": [
+              {
+                "type": "string",
+                "name": "name"
+              },
+              {
+                "type": "big_string",
+                "name": "description"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  } 
+}

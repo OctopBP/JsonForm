@@ -1,0 +1,149 @@
+﻿{
+  "schema": {
+    "load": "Base",
+
+    "groups": [
+      {
+        "name": "Base",
+        "fields": [
+          {
+            "type": "number",
+            "name": "id"
+          },
+          {
+            "type": "string",
+            "name": "name"
+          },
+          {
+            "type": "string",
+            "name": "locname"
+          },
+          {
+            "type": "string",
+            "name": "texname"
+          },
+          {
+            "type": "enum",
+            "name": "cardType",
+            "items": [ "Monster", "Trap", "Class", "Thing", "Lvlup", "Explosive" ]
+          }
+        ]
+      },
+      {
+        "name": "Thing",
+        "fields": [
+          {
+            "type": "number",
+            "name": "bonus"
+          },
+          {
+            "type": "enum",
+            "name": "thingType",
+            "items": [ "Weapon", "Head", "Armor", "Shoes" ]
+          },
+          {
+            "type": "bool",
+            "name": "twoHandWeapon"
+          },
+          {
+            "type": "bool",
+            "name": "isBig"
+          },
+          {
+            "type": "dictionary_array",
+            "name": "special",
+            "array_fields": [
+              {
+                "type": "string",
+                "name": "name"
+              },
+              {
+                "type": "string",
+                "name": "description"
+              },
+              {
+                "type": "string",
+                "name": "iconName"
+              },
+              {
+                "type": "number_array",
+                "name": "restriction"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Monster",
+        "fields": [
+          {
+            "type": "number",
+            "name": "lvl"
+          },
+          {
+            "type": "number",
+            "name": "numberOfTreasure"
+          },
+          {
+            "type": "dictionary_array",
+            "name": "special",
+            "array_fields": [
+              {
+                "type": "string",
+                "name": "name"
+              },
+              {
+                "type": "big_string",
+                "name": "description"
+              },
+              {
+                "type": "string",
+                "name": "iconName"
+              },
+              {
+                "type": "enum",
+                "name": "onLoseType",
+                "items": [ "Instant", "Selection", "Nothing" ] 
+              },
+              {
+                "type": "number_array",
+                "name": "classBonus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Class",
+        "fields": [
+          {
+            "type": "number",
+            "name": "className"
+          }
+        ]
+      },
+      {
+        "name": "Explosive",
+        "fields": [
+          {
+            "type": "number",
+            "name": "dmg"
+          },
+          {
+            "type": "big_string",
+            "name": "description"
+          }
+        ]
+      },
+      {
+        "name": "Trap",
+        "fields": [
+          {
+            "type": "number",
+            "name": "trapType"
+          }
+        ]
+      }
+    ]
+  } 
+}
